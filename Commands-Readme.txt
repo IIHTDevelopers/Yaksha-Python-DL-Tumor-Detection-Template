@@ -5,7 +5,7 @@
 
 * To launch application:
 	
-	python3 main.py -d “data/PNG” -i “Original” -m “Ground Truth” -b 2 -e 100
+	python3 main.py -d “data/PNG” -i “Original” -m “Ground Truth” -b 2 -e 2
  
 * To run Test cases:
 	
