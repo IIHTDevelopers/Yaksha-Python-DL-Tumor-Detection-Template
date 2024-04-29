@@ -1,8 +1,0 @@
-torch
-opencv-python
-opencv-python-headless
-numpy
-pandas
-pathlib
-split-folders
-scikit-learn
