@@ -3,7 +3,7 @@ from torch import nn
 from dataloader import PolypDatasetLoader
 from loss import DiceBCELoss
 from metric import dice_cofficient
-from model import CompNet
+from model import PolypModel
 from torch.utils.data import DataLoader
 from tqdm.auto import tqdm
 from sklearn.metrics import jaccard_score as jsc
@@ -21,7 +21,7 @@ class Test(nn.Module):
         if not os.path.exists(checkpoint_path):
             print("Inccorect model path")
             exit()
-        self.model = CompNet().to(self.device)
+        self.model = PolypModel().to(self.device)
         self.model.load_state_dict(torch.load(checkpoint_path)["model_state_dict"])
     
     def load_dataset(self, root_dir, image_dir, mask_dir):
